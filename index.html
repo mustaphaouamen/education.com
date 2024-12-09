@@ -540,32 +540,6 @@ toggleLink.addEventListener("click", function (event) {
 <!-- Add jQuery before the script for Bootstrap collapse functionality -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script>
-    // Access the input and button elements
-    const searchInput = document.getElementById('search-input');
-    const searchButton = document.getElementById('search-button');
-
-    // Function to handle search
-    function performSearch() {
-        const query = searchInput.value.trim(); // Get and trim the input value
-        if (query) {
-            console.log("Recherche pour:", query); // Replace this with your search logic
-        } else {
-            alert("Veuillez entrer une requête de recherche."); // Alert if empty
-        }
-    }
-
-    // Add event listener for the button click
-    searchButton.addEventListener('click', performSearch);
-
-    // Add event listener for "Enter" key in the input field
-    searchInput.addEventListener('keypress', function(event) {
-        if (event.key === 'Enter') {
-            event.preventDefault(); // Prevent default form submission (if in a form)
-            performSearch(); // Trigger search
-        }
-    });
-</script>
 
 
     
