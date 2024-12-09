@@ -524,7 +524,7 @@ toggleLink.addEventListener("click", function (event) {
         const emailInput = document.getElementById("email");
         const emailValue = emailInput.value;
 
-        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        const emailPattern = /^[a-zA-Z0-9._-]+@(gmail\.com|edu\.uiz\.ac\.ma)$/
 
         if (!emailPattern.test(emailValue)) {
             event.preventDefault(); // Stop form submission
