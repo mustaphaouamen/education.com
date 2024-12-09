@@ -17,9 +17,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
 <body>
@@ -152,15 +153,15 @@
                 <!-- Lessons Section -->
                 <div class="accordion-item" >
                     <h2 class="accordion-header" id="headingLessons">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLessons" aria-expanded="false" aria-controls="collapseLessons">
+                        <button class="accordion-button collapsed" type="button"  data-bs-toggle="collapse" data-bs-target="#collapseLessons" aria-expanded="false" aria-controls="collapseLessons">
                             leçons
+                
                         </button>
-        
                     </h2>
-                    <div id="collapseLessons" class="accordion-collapse collapse" aria-labelledby="headingLessons">
+                    <div id="collapseLessons" class="accordion-collapse collapse" aria-labelledby="headingLessons" data-bs-parent="#lessonsAccordion">
                         <div class="accordion-body" style="background-color: #f8f9fa;" class="p-5">
                             <div class="row" >
-                                <p>semestre 1</p>
+                                <p>Semestre 1</p>
                                 <div class="col-md-6">
                                     <div class="card mb-3" >
                                         <div class="card-body" >
@@ -192,14 +193,14 @@
                 <!-- Series d'Exercice Section -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingSeries">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeries" aria-expanded="false" aria-controls="collapseSeries">
+                        <button class="accordion-button collapsed" type="button" id="toggleSeries" data-bs-toggle="collapse" data-bs-target="#collapseSeries" aria-expanded="false" aria-controls="collapseSeries">
                             Series d'Exercices
                         </button>
                     </h2>
                     <div id="collapseSeries" class="accordion-collapse collapse" aria-labelledby="headingSeries">
                         <div class="accordion-body" style="background-color: #f8f9fa;" class="p-5">
                             <div class="row">
-                                <p>semestre 1</p>
+                                <p>Semestre 1</p>
                                 <div class="col-md-6">
                                     <div class="card mb-3">
                                         <div class="card-body">
@@ -227,13 +228,13 @@
                 <!-- Devoirs Section -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingDevoirs">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDevoirs" aria-expanded="false" aria-controls="collapseDevoirs">
+                        <button class="container-fluid accordion-button collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseDevoirs" aria-expanded="false" aria-controls="collapseDevoirs">
                             Devoirs
                         </button>
                     </h2>
                     <div id="collapseDevoirs" class="accordion-collapse collapse" aria-labelledby="headingDevoirs" data-bs-parent="#teachingAccordion">
                         <div class="accordion-body" style="background-color: #f8f9fa;" class="p-5">
-                            <p>semestre 1</p>
+                            <p>Semestre 1</p>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="card mb-3">
@@ -285,7 +286,7 @@
                             <div id="collapseLessons1bacsef" class="accordion-collapse collapse" aria-labelledby="headingLessons1bacsef">
                                 <div class="accordion-body" style="background-color: #f8f9fa;" class="p-5">
                                     <div class="row">
-                                        <p>semestre 1</p>
+                                        <p>Semestre 1</p>
                                         <div class="col-md-6">
                                             <div class="card mb-3">
                                                 <div class="card-body">
@@ -324,7 +325,7 @@
                             <div id="collapseSeries1bacsef" class="accordion-collapse collapse" aria-labelledby="headingSeries1bacsef">
                                 <div class="accordion-body" style="background-color: #f8f9fa;" class="p-5">
                                     <div class="row">
-                                        <p>semestre 1</p>
+                                        <p>Semestre 1</p>
                                         <div class="col-md-6">
                                             <div class="card mb-3">
                                                 <div class="card-body">
@@ -359,7 +360,7 @@
                   <div id="collapseDevoirs1bacsef" class="accordion-collapse collapse" aria-labelledby="headingDevoirs1bacsef" data-bs-parent="#teachingAccordion1bacsef">
                     <div class="accordion-body" style="background-color: #f8f9fa;" class="p-5">
                         <div class="row">
-                            <p>semestre 1</p>
+                            <p>Semestre 1</p>
                             <div class="col-md-6">
                                 <div class="card mb-3">
                                     <div class="card-body">
@@ -542,7 +543,37 @@ toggleLink.addEventListener("click", function (event) {
 
 
 
-    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<script>
+    // Access the input and button elements
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+
+    // Function to handle search
+    function performSearch() {
+        const query = searchInput.value.trim(); // Get and trim the input value
+        if (query) {
+            console.log("Recherche pour:", query); // Replace this with your search logic
+        } else {
+            alert("Veuillez entrer une requête de recherche."); // Alert if empty
+        }
+    }
+
+    // Add event listener for the button click
+    searchButton.addEventListener('click', performSearch);
+
+    // Add event listener for "Enter" key in the input field
+    searchInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent default form submission (if in a form)
+            performSearch(); // Trigger search
+        }
+    });
+</script>
+
 </body>
 <!-- Include Bootstrap JS at the end of the body -->
 
